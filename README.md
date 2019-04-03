@@ -121,7 +121,7 @@ In the page's footer, just before <code>&lt;/body&gt;</code>, include the requir
 </div>
 ```
 
-The structure you see in the code above (slider-container > slider-carousel > slider) as well as the class names used are required. For Videos add the class `slide-video` to the video tag.
+The structure you see in the code above (slider-container > slider-carousel > slider) as well as the class names used are required. For videos add the class `slide-video` to the video tag.
 
 ### 4. Instantiate the slider ###
 
