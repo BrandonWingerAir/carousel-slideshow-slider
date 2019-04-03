@@ -2,6 +2,8 @@
 
 >A responsive and touch-enabled plugin with full controls built with ES6 JavaScript and jQuery Mobile that enables you to create clean and customizable sliders.
 
+[Demo](https://brandonwinger.com/carousel-slideshow-slider/)
+
 Features: 
 
 * any # of slides (just edit html)
@@ -20,8 +22,6 @@ Features:
 * CSS-only navigation controls (no graphics) for easy customization
 * video support
 * JavaScript breakpoints 
-
-Check the plugin's [presentation page](https://brandonwinger.com/carousel-slideshow-slider/) for a demo of the features.
 
 ## Getting started ##
 
