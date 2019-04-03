@@ -148,4 +148,7 @@ If you need help with implementing the slider in your project, feel free to <a h
 
 ## License ##
 
-The plugin is available under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.
+The free plugin is available under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.
+
+## Support this project ##
+If you found the plugin useful and would like to help support further development and new projects, please visit the [donation link](https://brandonwinger.com/carousel-slideshow-slider#footer).
