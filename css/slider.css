@@ -5,7 +5,7 @@
 /* Slider */
 .slider-container {
   width: 90%;
-  margin: 20px auto;
+  margin: 0 auto;
   height: 400px;
   z-index: 999;
 }
@@ -66,6 +66,11 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+.slide-video {
+  width: 100%;
+  min-height: 100%;
 }
 
 .overlay {

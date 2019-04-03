@@ -2,6 +2,7 @@ $(document).ready(() => {
   $.mobile.loading().hide();
 
   // Slider
+  const autoplaySpeed = 6000;
   const slider = document.querySelector('.slider');
   const sliderCarousel = document.querySelector('.slider-carousel');
   const slideOverlay = document.querySelector('.slide-overlay');
@@ -392,7 +393,7 @@ $(document).ready(() => {
       nextSlide();
       nextSectionIndex();
       setIndex();
-    }, 5000);      
+    }, autoplaySpeed); // interval 
   }
 
   auto();
