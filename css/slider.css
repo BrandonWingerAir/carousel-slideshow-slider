@@ -34,7 +34,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 1px;
 }
 
 .slide-box {
@@ -47,7 +46,8 @@
   border-radius: 2px;
   border: 2px solid #fff;
   cursor: pointer;
-  margin-left: 2px;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-text {
