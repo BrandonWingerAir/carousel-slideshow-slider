@@ -4,8 +4,8 @@
 
 Features: 
 
-* modular architecture
 * any # of slides (just edit html)
+* modular architecture
 * responsive
 * touch-swipe
 * smooth CSS3 transitions
