@@ -122,16 +122,6 @@ In the page's footer, just before <code>&lt;/body&gt;</code>, include the requir
 
 The structure you see in the code above (slider-container > slider-carousel > slider) as well as the class names used are required. For videos add the class `slide-video` to the video tag.
 
-### 4. Instantiate the slider ###
-
-```html
-<script type="text/javascript">
-	jQuery( document ).ready(function( $ ) {
-		$( '#my-slider' ).sliderPro();
-	});
-</script>
-```
-
 ## Detailed usage instructions ##
 **Number of Slides:** Add or remove the div tag with class `slide-panel`.
 
