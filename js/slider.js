@@ -1,8 +1,9 @@
-$(document).ready(() => {
+$(() => {
   $.mobile.loading().hide();
 
   // Slider
   const autoplaySpeed = 6000;
+  const transitionSpeed = 1;
   const slider = document.querySelector('.slider');
   const sliderCarousel = document.querySelector('.slider-carousel');
   const slideOverlay = document.querySelector('.slide-overlay');
@@ -30,7 +31,7 @@ $(document).ready(() => {
   let slideDirection;
   let sectionIndex = 'indexDefault';
   let numSlides = document.querySelector(".slide-selector").getElementsByTagName("li").length;
-  let slideInterval = null;
+  let slideInterval = 0;
   let slideReady = true;
   let slidePaused = false;
   let slideModalFix = false;
@@ -52,7 +53,7 @@ $(document).ready(() => {
     slider.style.transition = 'none';
     slider.style.transform = 'translate(0)';
     setTimeout(function() {
-      slider.style.transition = 'all 0.5s';
+      slider.style.transition = `all ${transitionSpeed}s`;
     });
     slideReady = true;
   });
@@ -142,43 +143,47 @@ $(document).ready(() => {
   // Slide selector
   document.querySelectorAll('.slider-controls li').forEach(function(indicator, index) {
     $(indicator).click(function() {
-      if (!$(indicator).hasClass('slide-selected')) {
-        clearInterval(SlideInterval);
+      if (slideReady) {
+        slideReady = false;
+      
+        if (!$(indicator).hasClass('slide-selected')) {
+          clearInterval(slideInterval);
 
-        moveToNext = () => {
-          slider.appendChild(slider.firstElementChild);
-          sliderCarousel.style.justifyContent = 'flex-start';
-          slider.style.transform = 'translate(-20%)';
+          moveToNext = () => {
+            slider.appendChild(slider.firstElementChild);
+            sliderCarousel.style.justifyContent = 'flex-start';
+            slider.style.transform = 'translate(-20%)';
+          }
+    
+          if (sectionIndex < index) {
+            nextSlide();
+    
+            for (var i = sectionIndex + 1; i < index; i++) {
+              moveToNext();
+            }
+          } else if (sectionIndex > index) {
+            prevSlide();
+    
+            for (var i = sectionIndex - 1; i > index; i--) {
+              slider.prepend(slider.lastElementChild);
+              sliderCarousel.style.justifyContent = 'flex-end';
+              slider.style.transform = 'translate(20%)';        
+            }
+          } else {
+            sectionIndex = 0;
+            nextSlide();
+    
+            for (var i = sectionIndex + 1; i < index; i++) {
+              moveToNext();
+            }
+          }
+    
+          sectionIndex = index;
+    
+          setIndex();
+    
+          indicator.classList.add('slide-selected');
         }
-  
-        if (sectionIndex < index) {
-          nextSlide();
-  
-          for (var i = sectionIndex + 1; i < index; i++) {
-            moveToNext();
-          }
-        } else if (sectionIndex > index) {
-          prevSlide();
-  
-          for (var i = sectionIndex - 1; i > index; i--) {
-            slider.prepend(slider.lastElementChild);
-            sliderCarousel.style.justifyContent = 'flex-end';
-            slider.style.transform = 'translate(20%)';        
-          }
-        } else {
-          sectionIndex = 0;
-          nextSlide();
-  
-          for (var i = sectionIndex + 1; i < index; i++) {
-            moveToNext();
-          }
-        }
-  
-        sectionIndex = index;
-  
-        setIndex();
-  
-        indicator.classList.add('slide-selected');
       }
     });
   });
@@ -399,14 +404,6 @@ $(document).ready(() => {
   auto();
 
   // Pause autoplay when window is not in focus
-  /**
-    Registers the handler to the event for the given object.
-    @param obj the object which will raise the event
-    @param evType the event type: click, keypress, mouseover, ...
-    @param fn the event handler function
-    @param isCapturing set the event mode (true = capturing event, false = bubbling event)
-    @return true if the event handler has been attached correctly
-    */
    function addEvent(obj, evType, fn, isCapturing){
     if (isCapturing==null) isCapturing=false; 
     if (obj.addEventListener){
@@ -423,9 +420,7 @@ $(document).ready(() => {
   }
 
   // register to the potential page visibility change
-  addEvent(document, "potentialvisilitychange", function(event) {
-    // document.getElementById("x").innerHTML+="potentialVisilityChange: potentialHidden="+document.potentialHidden+", document.potentiallyHiddenSince="+document.potentiallyHiddenSince+" s<br>";
-  });
+  addEvent(document, "potentialvisilitychange", function(event) {});
 
   // register to the W3C Page Visibility API
   var hidden=null;
@@ -443,12 +438,6 @@ $(document).ready(() => {
     hidden="hidden";
     visibilityChange="visibilitychange";
   }
-  if (hidden!=null && visibilityChange!=null) {
-    addEvent(document, visibilityChange, function(event) {
-      // document.getElementById("x").innerHTML+=visibilityChange+": "+hidden+"="+document[hidden]+"<br>";
-    });
-  }
-
 
   var potentialPageVisibility = {
     pageVisibilityChangeThreshold:3*3600, // in seconds
@@ -497,18 +486,10 @@ $(document).ready(() => {
       document.potentiallyHiddenSince=0;
       var timeoutHandler = null;
 
-      // addEvent(document, "pageshow", function(event) {
-      //   document.getElementById("x").innerHTML+="pageshow/doc:<br>";
-      // });
-      // addEvent(document, "pagehide", function(event) {
-      //   document.getElementById("x").innerHTML+="pagehide/doc:<br>";
-      // });
-      // addEvent(window, "pageshow", function(event) {
-      //   document.getElementById("x").innerHTML+="pageshow/win:<br>"; // raised when the page first shows
-      // });
-      // addEvent(window, "pagehide", function(event) {
-      //   document.getElementById("x").innerHTML+="pagehide/win:<br>"; // not raised
-      // });
+      addEvent(document, "pageshow", function(event) {});
+      addEvent(document, "pagehide", function(event) {});
+      addEvent(window, "pageshow", function(event) {});
+      addEvent(window, "pagehide", function(event) {});
       addEvent(document, "mousemove", function(event) {
         lastActionDate=new Date();
       });

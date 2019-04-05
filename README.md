@@ -5,23 +5,20 @@
 [Demo](https://brandonwinger.com/carousel-slideshow-slider/)
 
 Features: 
-
-* any # of slides (just edit html)
-* modular architecture
-* responsive
-* touch-swipe
-* smooth CSS3 transitions
-* infinite sliding
-* carousel layout
-* different sized images
-* full width and full window support
-* display modal
-* deep linking
-* lazy loading
-* full-screen support
-* CSS-only navigation controls (no graphics) for easy customization
-* video support
-* JavaScript breakpoints 
+* Easy to customize
+* Any # of slides (edit html only)
+* Responsive
+* Touch-swipe
+* Smooth CSS3 transitions
+* Infinite sliding
+* Different sized images
+* Full width and full window support
+* Display modal
+* Deep linking
+* Lazy loading
+* Full-screen support
+* Video support
+* JavaScript breakpoints
 
 ## Getting started ##
 
@@ -134,11 +131,13 @@ The structure you see in the code above (slider-container > slider-carousel > sl
 ```
 
 ## Detailed usage instructions ##
-Number of Slides: Add or remove the div tag with class `slide-panel`.
+**Number of Slides:** Add or remove the div tag with class `slide-panel`.
 
-Autoplay Speed: Adjust the `autoplaySpeed` variable in the slider.js file.
+**Autoplay Speed:** Change the `autoplaySpeed` variable in the slider.js file.
 
-If you would like to change the size of the slider adjust the `slider-container` width and height in the slider.css file.
+**Transition Speed:** Change the `slideChangeSpeed` variable in the slider.js file.
+
+**Slider Size:** Change the `slider-container` width and height in the slider.css file.
 
 ## Support ##
 
