@@ -10,6 +10,7 @@ Features:
 * Responsive
 * Touch-swipe
 * Smooth CSS3 transitions
+* Pause on Hover/Out of View
 * Infinite sliding
 * Different sized images
 * Full width and full window support
