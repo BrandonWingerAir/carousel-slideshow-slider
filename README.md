@@ -19,6 +19,7 @@ Features:
 * Full-screen support
 * Video support
 * JavaScript breakpoints
+* 18kb minified
 
 ## Getting started ##
 

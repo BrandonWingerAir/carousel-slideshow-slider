@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Slideshow | Responsive Slider</title>
+
+    <!-- Slider Styles -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+      rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- Slider -->
+    <div class="slider-container">
+      <div class="slider-carousel">
+        <div class="slider">
+          <div class="slide-panel">
+            <img class="slide-img" src="https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <div class="slide-box">
+              <h2 class="slide-text">Slide 1</h2>
+            </div>
+            <div class="slide-overlay"></div>
+          </div>
+          <div class="slide-panel">
+            <img class="slide-img" src="https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+            <div class="slide-box">
+              <h2 class="slide-text">Slide 2</h2>
+            </div>
+          </div>
+          <div class="slide-panel">
+            <img class="slide-img" src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <div class="slide-box">
+              <h2 class="slide-text">Slide 3</h2>
+            </div>
+          </div>
+          <div class="slide-panel">
+            <img class="slide-img" src="https://images.pexels.com/photos/917494/pexels-photo-917494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <div class="slide-box">
+              <h2 class="slide-text">Slide 4</h2>
+            </div>
+          </div>
+          <div class="slide-panel">
+            <img class="slide-img" src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <div class="slide-box">
+              <h2 class="slide-text">Slide 5</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <span class="slider-arrow prev-slide">
+            <i class="material-icons">
+              keyboard_arrow_left
+            </i>
+          </span>
+          <span class="slider-arrow next-slide">
+            <i class="material-icons">
+              keyboard_arrow_right
+            </i>
+          </span>
+          <div class="slideshow-toggle">
+            <i class="material-icons play-slideshow">
+              play_arrow
+            </i>
+            <i class="material-icons pause-slideshow">
+              pause
+            </i>
+          </div>
+          <ul class="slide-selector">
+            <li class="slide-selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-modal">
+      <span class="slider-close">&times;</span>
+      <div class="modal-slide"></div>
+    </div>
+
+    <!-- Slider Scripts -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
