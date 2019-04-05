@@ -21,6 +21,7 @@ Features:
 * Video support
 * JavaScript breakpoints
 * 18kb minified
+* W3C compliant
 
 ## Getting started ##
 
