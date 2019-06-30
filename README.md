@@ -1,6 +1,6 @@
 # [Carousel Slideshow Plugin](https://brandonwinger.com/carousel-slideshow-slider/) #
 
->A responsive and touch-enabled plugin with full controls built with ES6 JavaScript and jQuery Mobile that enables you to create clean and customizable sliders.
+>Responsive and touch-enabled plugin with full controls built with ES6 JavaScript and jQuery Mobile that enables you to create clean and customizable sliders.
 
 [Demo](https://brandonwinger.com/carousel-slideshow-slider/)
 
