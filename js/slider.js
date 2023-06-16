@@ -246,7 +246,7 @@ $(() => {
     } else if (e.keyCode == '27') {
       closeModal();
     } else if (e.keyCode == '32') {      
-      if (!slidePaused) {
+      if (slidePaused == false) {
         pauseSlideshow.style.display = 'none';
         playSlideshow.style.display = 'flex';
 
@@ -336,13 +336,11 @@ $(() => {
   }
 
   mouseLeaveCheck = (e) => {
-    var onMouEnt = e.type == 'mouseenter' ?  
-                      clearInterval(slideInterval) :   
-                      auto();       
+    var onMouEnt = e.type == 'mouseenter' ? clearInterval(slideInterval) : auto();       
   }
 
   slideToggle = () => {
-    if (!slidePaused) {
+    if (slidePaused == false) {
       pauseAutoplay();
       clearInterval(slideInterval);    
     } else {
@@ -378,18 +376,17 @@ $(() => {
 
     pauseAutoplay();
     clearInterval(slideInterval);
-
+    
     slideToggle();
     slidePaused = true;
-
   });
 
   $(playSlideshow).click(function() {
     playSlideshow.style.display = 'none';
     pauseSlideshow.style.display = 'block';
-    slidePaused = false;
-
+    
     slideToggle();
+    slidePaused = false;
   });
 
   // Autoplay
