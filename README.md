@@ -2,7 +2,7 @@
 
 >Responsive and touch-enabled plugin with full controls built with ES6 JavaScript and jQuery Mobile that enables you to create clean and customizable sliders.
 
-[Demo](https://brandonwinger.com/carousel-slideshow-slider/)
+[Demo](https://brandonwinger-air.com/carousel-slideshow-slider)
 
 Features: 
 * Easy to customize
@@ -141,6 +141,3 @@ If you need help with implementing the slider in your project, feel free to <a h
 ## License ##
 
 The free plugin is available under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.
-
-## Support this project ##
-If you found the plugin useful and would like to help support further development and new projects, please visit the [donation link](https://brandonwinger.com/carousel-slideshow-slider#footer).
